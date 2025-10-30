@@ -1,0 +1,123 @@
+* {
+  rosewater: #f5e0dc;
+  flamingo: #f2cdcd;
+  pink: #f5c2e7;
+  mauve: #cba6f7;
+  red: #f38ba8;
+  maroon: #eba0ac;
+  peach: #fab387;
+  yellow: #f9e2af;
+  green: #a6e3a1;
+  teal: #94e2d5;
+  sky: #89dceb;
+  sapphire: #74c7ec;
+  blue: #89b4fa;
+  lavender: #b4befe;
+  text: #cdd6f4;
+  subtext1: #bac2de;
+  subtext0: #a6adc8;
+  overlay2: #9399b2;
+  overlay1: #7f849c;
+  overlay0: #6c7086;
+  surface2: #585b70;
+  surface1: #45475a;
+  surface0: #313244;
+  base: #1e1e2e;
+  mantle: #181825;
+  crust: #11111b;
+  background-color: @base;
+}
+
+window {
+    height: 600;
+    width: 600;
+
+    border: 2;
+    border-radius: 10;
+    border-color: @crust;
+}
+
+mainbox {
+    spacing: 0;
+    children: [inputbar, message, listview];
+}
+
+inputbar {
+    color: @text;
+    padding: 14;
+    background-color: @base;
+}
+
+message {
+    padding: 10;
+    background-color: @surface2;
+}
+
+listview {
+    padding: 8;
+    border-radius: 0 0 10 10;
+    border: 2 2 2 2;
+    border-color: @base;
+    background-color: @base;
+    dynamic: false;
+}
+
+textbox {
+    text-color: @text;
+    background-color: inherit;
+}
+
+error-message {
+    border: 20 20 20 20;
+}
+
+entry, prompt, case-indicator {
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0 10 0 0;
+}
+
+element {
+    padding: 5;
+    vertical-align: 0.5;
+    border-radius: 10;
+    background-color: @base;
+}
+
+element.selected.normal {
+    background-color: @surface2;
+}
+
+element.alternate.normal {
+    background-color: inherit;
+}
+
+element.normal.active, element.alternate.active {
+    background-color: @maroon;
+}
+
+element.selected.active {
+    background-color: @green;
+}
+
+element.normal.urgent, element.alternate.urgent {
+    background-color: @red;
+}
+
+element.selected.urgent {
+    background-color: @blue;
+}
+
+element-text, element-icon {
+    size: 40;
+    margin: 0 10 0 0;
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: @text;
+}
+
+element-text .active, element-text .urgent {
+    text-color: @base;
+}
